@@ -380,4 +380,15 @@ m2=1
 </panel_attributes>
     <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1215</x>
+      <y>315</y>
+      <w>54</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
