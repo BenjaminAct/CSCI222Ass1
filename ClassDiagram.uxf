@@ -155,6 +155,42 @@ setOccupation (string)
   <element>
     <id>UMLClass</id>
     <coordinates>
+      <x>1026</x>
+      <y>459</y>
+      <w>207</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>/Policy/
+--
+(#) PolicyHolder_ID: string
+(#) policyNumber : string
+(#) coverageType : string
+(#) coverageValue : double
+(#) inclusionException : string
+(#) riskLevel : char
+(#) premium : double
+(#) excess : double
+--
+(+) Policy (policyHolder_ID : string,
+             policyNumber: string,
+             coverageType : string,
+             coverageValue : double,
+             riskLevel : char,
+             excess : double,
+             premium : double)
+
+getPolicyHolder_ID () : string
+getPolicyNumber () : string
+getCoverageType () : string
+getCoverageValue () : double
+getRiskLevel () : char
+getPremium () : double
+getExcess () : double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
       <x>108</x>
       <y>549</y>
       <w>252</w>
@@ -180,6 +216,37 @@ getCarModel() : string
 getEngineCapactiy() : int
 getCarType() : string
 getCarAge() : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>999</x>
+      <y>756</y>
+      <w>252</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>CarPolicy
+--
+(-) CP_carID : string
+(-) licenseRegDate : Date
+(-) extraNotesOnDriver: string
+(-) driverRating : int
+(-) noClaimBonus : float
+--
+(+) CarPolicy (carID : string, carInfo : char,
+                  licenseRegDate : Date,
+                  extraNotesOnDriver : string,
+                  driverRating : int,
+                  noClaimBonus : float)
+
+getCarID() : string
+getCarInfo() : char
+getLicenseRegDate() : Date
+getExtraNotesOnDriver() : string
+getDriverRating() : int
+getNoClaimBonus() : float
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -222,6 +289,32 @@ m1=1
 m2=0 .. *
 &lt; owns</panel_attributes>
     <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>612</y>
+      <w>216</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+has &gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1107</x>
+      <y>702</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -271,5 +364,31 @@ investigates v
 m1=1
 m2=*</panel_attributes>
     <additional_attributes>300.0;10.0;300.0;230.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>468</y>
+      <w>198</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+&lt; has
+</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1215</x>
+      <y>315</y>
+      <w>54</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
